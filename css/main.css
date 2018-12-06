@@ -1,10 +1,19 @@
+article, section, header, nav, footer{
+	border: 1px solid black;
+}
+
 html{/* Comment */
 	font-family: sans-serif;
+
 }
 body{/* Comment */
 	margin: 0;
+	width: auto;
 }
 nav{/* Comment */
+
+}
+#navigaion{
 
 }
 main{/* Comment */
@@ -12,8 +21,8 @@ main{/* Comment */
 }
 header{/* Comment */
 	margin: 0;
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100vh;
+	width: 100%;
 	background-color: black;
 	color: white;
 	text-align: center;
@@ -31,8 +40,8 @@ header a{
 }
 section{/* Comment */
 	margin: 0;
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100vh;
+	width: 100%;
 	display: grid;
 	grid-template-areas:  	
 }
@@ -42,12 +51,79 @@ article{/* Comment */
 
 #knowledge{
 	display: grid;
-	grid-template-columns: 20% 350px 100px 200px 20%;
-	grid-template-rows: 20% 60% 20%;
+	grid-template-columns: auto 550px 140px 300px auto;
+	grid-template-rows: auto 60% auto;
 }
 #knowledge-article{
 	grid-area: 2 / 2;
 }
 #knowledge-video{
-	grid-area: 2 / 4;
+	grid-area: 1 / 4 / 4;
+}
+/* Safari 4.0 - 8.0 */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes slideAnim {
+  	from {
+  		left: 0;
+  		opacity: 0;
+  	}
+  	to {
+  		left: 30%;
+  		opacity: 1;
+  		background-color: blue;
+  	}
+}
+
+@keyframes slideAnim {
+  	from {
+  		left: 0px;
+  		width: 0px;
+  	}
+  	to {
+  		width: 100px;
+  		left: 400px; 
+  		background-color: blue;
+  	}
+}
+#slide{
+
+  	
+}
+#count {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+#slide-info{
+	width: 100px;
+  	height: 100px;
+  	background-color: red;
+  	position: relative;
+  	animation-name: slideAnim;
+  	animation-duration: 4s;
+  	animation-fill-mode: forwards;
+  	-webkit-animation-name: slideAnim; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+}
+#slide-info{
+
+}
+
+#projects{
+	display: grid;
+	grid-template-columns: 300px 300px 300px;
+	grid-template-rows: 80px 250px 250px;
+	grid-column-gap: 10px;
+  	grid-row-gap: 15px;
+  	justify-content: center;
+  	align-content: center;
+}
+.projects-header{
+	grid-area: 1 / 1 / 1/ 4;
+}
+
+
+#about-me{
+
 }
