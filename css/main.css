@@ -1,18 +1,32 @@
-article, section, header, nav, footer{
-	border: 1px solid black;
-}
 
+::-webkit-scrollbar { 
+    display: none; 
+}
 html{/* Comment */
 	font-family: sans-serif;
 
 }
 body{/* Comment */
 	margin: 0;
-	width: auto;
+
+}
+h1{
+	font-size: 42pt;
+	margin: 5px;
 }
 nav{/* Comment */
 
 }
+ progress{
+ 	width: 100%;
+  	height: 8px;
+  	background: #ccc;
+  	margin: 0;
+  	padding: 0;
+  	top: 0;
+  	z-index: 100;
+  	position: fixed;
+ }
 #navigaion{
 
 }
@@ -20,17 +34,20 @@ main{/* Comment */
 	margin: 0;
 }
 header{/* Comment */
-	margin: 0;
+	display: inline-block;
 	height: 100vh;
 	width: 100%;
-	background-color: black;
+	background-color: #4AB19A;
 	color: white;
 	text-align: center;
+	
 }
 header h1{
+	top: 20%;
 	font-weight: 10pt;
 	font-size: 72pt;
-
+	position: relative;
+	vertical-align: middle;
 }
 header p{
 
@@ -50,15 +67,24 @@ article{/* Comment */
 }
 
 #knowledge{
+	background-color: #21364B ;
+	color: white;
 	display: grid;
-	grid-template-columns: auto 550px 140px 300px auto;
+	grid-template-columns: auto 550px 140px 400px auto;
 	grid-template-rows: auto 60% auto;
+
+
 }
 #knowledge-article{
 	grid-area: 2 / 2;
 }
 #knowledge-video{
 	grid-area: 1 / 4 / 4;
+
+}
+#knowledge ul{
+	list-style: none;
+	text-align: center;
 }
 /* Safari 4.0 - 8.0 */
 /* Safari 4.0 - 8.0 */
@@ -68,7 +94,9 @@ article{/* Comment */
   		opacity: 0;
   	}
   	to {
-  		left: 30%;
+  		left: 25%;
+  		height: 90%;
+  		width: 70%;
   		opacity: 1;
   		background-color: blue;
   	}
@@ -78,23 +106,26 @@ article{/* Comment */
   	from {
   		left: 0px;
   		width: 0px;
+  		opacity: 0;
   	}
   	to {
-  		width: 100px;
-  		left: 400px; 
+  		width: 70%;
+  		height: 90%;
+  		left: 25%; 
+  		opacity: 1;
   		background-color: blue;
   	}
 }
-#slide{
 
-  	
+#slide{
+  	background-color: #E29470;
+  	display: grid;
+  	grid-template-columns: 50% 50%;
+  	grid-template-rows: 100%;
+  	justify-content: center;
 }
-#count {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-#slide-info{
+#slide-picture{
+	top: 20px;
 	width: 100px;
   	height: 100px;
   	background-color: red;
@@ -102,18 +133,21 @@ article{/* Comment */
   	animation-name: slideAnim;
   	animation-duration: 4s;
   	animation-fill-mode: forwards;
+
   	-webkit-animation-name: slideAnim; /* Safari 4.0 - 8.0 */
   	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
   	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
 }
 #slide-info{
-
+	
 }
 
 #projects{
+	background-color: #66A7D5;
+
 	display: grid;
-	grid-template-columns: 300px 300px 300px;
-	grid-template-rows: 80px 250px 250px;
+	grid-template-columns: repeat(3, 25%);
+	grid-template-rows: 120px 350px 350px;
 	grid-column-gap: 10px;
   	grid-row-gap: 15px;
   	justify-content: center;
@@ -121,9 +155,69 @@ article{/* Comment */
 }
 .projects-header{
 	grid-area: 1 / 1 / 1/ 4;
+	text-align: center;
+	color: white;
+
+}
+.project-item{
+	width: 100%;
+	background-color: grey;
+	color: white;
+}
+.project-item h2{
+	text-align: center;
+	margin: 5px;
+}
+.project-item p{
+	margin: 0 15px 10px 15px;
+}
+.project-item a{
+	display: inline-block;
+	text-decoration: none;
+	margin: 10px 15px 0 15px;
+
+}
+.project-item img{
+	display: block;
+	margin: 0 auto;
+	width: 95%;
+	height: 60%;
+}
+.download-link{
+	
+}
+.demo-link{
+	float: right;
 }
 
 
 #about-me{
+	background-color: #31355B;
+	color: white;
+	display: grid;
+	grid-template-columns: 500px 400px;
+	grid-template-rows: 120px 350px 350px;
+	grid-column-gap: 10px;
+  	grid-row-gap: 15px;
+  	justify-content: center;
+  	align-content: center;
+}
 
+#about-info{
+
+}
+#profile-photo{
+	width: 400px;
+}
+
+
+
+
+
+#myVideo {
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
 }

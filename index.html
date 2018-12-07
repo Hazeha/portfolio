@@ -6,51 +6,69 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+	
 	<script type="text/javascript">
-		function scrollFunction() {
-  			var element = document.getElementById("slide-info");
-  			var AnimPosition = 1400;
-  			var counter = document.getElementById("count");
-  			counter.innerHTML = 'pageyOffset: ' + window.pageYOffset;
+	// Scroll function for top indocator 
+		window.onscroll = function() {scrollIndicator()};
 
+		function scrollIndicator() {
+			var element = document.getElementById("slide-picture");
+
+			var AnimPosition = 1400;
+
+
+  			var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  			var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  			var scrolled = (winScroll / height) * 100;
+  			document.getElementById("scrollBar").value = scrolled.toString();
   			if (window.pageYOffset < AnimPosition) {
     			element.style.cssText += "display:none;";
-  			} else {
-    		element.style.cssText += "display: block;";
-  			}
-		}
-		window.onscroll = scrollFunction;
 
+  			} else {
+    			element.style.cssText += "display: block;";
+
+  			}
+  			
+		}
 	</script>
 
 	<main>
 		<nav>
+		<progress max="100" id="scrollBar" value=""></progress>
 		<h1>nav</h1>
+		<a href="index.html">About Me</a>
+		<a href="#work">Work</a>
 	</nav>
-	<p id = "count">
-pageYOffset: 0
-</p>
 
 		<header>
-			<article>
+			
 
-			<h1>Hello<br>I'm Nikolaj Lassen</h1>
-			<p>Web Design - Development - Creativity</p>
+			<h1>Nikolaj Lassen</h1>
+			<p>Web Design - Development - Integration</p>
 
-			</article>
-			<article class="header-intro">
-				
-			</article>
+			
+			
 
 		</header>
 
 
 		<section id="knowledge">
 			<article id="knowledge-article">
-				<h1> Knowledge </h1>
+				<ul>
+					<li><h1>Apps</h1></li>
+					<li><h1>Coding</h1></li>
+					<li><h1>Graphics</h1></li>
+					<li><h1>3D-Models</h1></li>
+					<li><h1>Web Design</h1></li>
+					<li><h1>Development</h1></li>
+					<li><h1>Game Designs</h1></li>
+
+				</ul>
 			</article>
-			<article id="knowledge-video">
-				<h1> Video </h1>
+			<article id="knowledge-video">				
+				<video autoplay muted loop id="myVideo">
+  					<source src="img/coding.mp4" type="video/mp4"> 				
+				</video>
 			</article>
 			
 
@@ -63,14 +81,27 @@ pageYOffset: 0
 		<section id="slide">
 			
 
-			<h1>Slider section</h1>
-			<article id="slide-info">
+			<article>
 				
+				<p id="slide-picture">
+					picture
+				</p>
+				
+
+			</article>
+			<article>
+				
+				<p>
+					Design
+				</p>
+				<p>
+					Development
+				</p>
+				<p>Integration</p>
+				<a href="#more">My Work</a>
+
 			</article>
 
-			<article id="slide-picture">
-				
-			</article>
 
 
 
@@ -79,38 +110,94 @@ pageYOffset: 0
 		<section id="projects">
 
 			<article class="projects-header">
-				
+				<h1>Recent Projects</h1>
 			</article>
 
 			<article class="project-item">
-				
+				<h2>Project Name</h2>
+				<p>Project Descripttion</p>
+				<p>Project Descripttion</p>
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<a href="#link" class="demo-link">Demo</a>
+				<a href="#download" class="download-link">Download</a>
 			</article>
 			<article class="project-item">
-				
+				<h2>Project Name</h2>
+				<p>Project Descripttion</p>
+				<p>Project Descripttion</p>
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<a href="#link" class="demo-link">Demo</a>
+				<a href="#download" class="download-link">Download</a>
 			</article>
 			<article class="project-item">
-				
+				<h2>Project Name</h2>
+				<p>Project Descripttion</p>
+				<p>Project Descripttion</p>
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<a href="#link" class="demo-link">Demo</a>
+				<a href="#download" class="download-link">Download</a>
 			</article>
 			<article class="project-item">
-				
+				<h2>Project Name</h2>
+				<p>Project Descripttion</p>
+				<p>Project Descripttion</p>
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<a href="#link" class="demo-link">Demo</a>
+				<a href="#download" class="download-link">Download</a>
 			</article>
 			<article class="project-item">
-				
+				<h2>Project Name</h2>
+				<p>Project Descripttion</p>
+				<p>Project Descripttion</p>
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<a href="#link" class="demo-link">Demo</a>
+				<a href="#download" class="download-link">Download</a>
 			</article>
 			<article class="project-item">
-				
+				<h2>Project Name</h2>
+				<p>Project Descripttion</p>
+				<p>Project Descripttion</p>
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<a href="#link" class="demo-link">Demo</a>
+				<a href="#download" class="download-link">Download</a>
 			</article>
+
 
 			
 
 		</section>
 
 
-		<section>
+		<section id="about-me">
 			
-			<h1>Me</h1>
+			<article>
+				<h1>I'm Nikolaj</h1>
+				<h3>Whatever the challenge you have, i help with a solution</h3>
+				<p>I love to share all my knowledge.
+					In fact it's a win/win situation.
+					Studies says that giving your own knowledge to others by teaching them, will expand your own knowledge.
+					But everyone isn't Stephen Hawking.</p>
 
+				<h2>Ask Me!</h2>
+    				<p>I love to share all my knowledge.</p>
+    				<p>In fact it's a win/win situation. </p><p> Studies says that giving your own knowledge to others by teaching them, will expand your own knowledge.</p><p> But everyone isn't Stephen Hawking.</p>
 
+    			<h2>Hire!</h2>
+    				<p>Im currently not looking for work, if you can offer something different and with a higher difficulty Contact me!</p>
+			</article>
+			<article id="about-info">
+				<img id="profile-photo" src="img/me.jpg">
+				
+				<p>Coding Experience - Trained</p>
+    			<p>Design Experience - Beginner</p>
+    			<p>Data Security - Experienced</p>
+    			<p>Business Economics - Trained</p>
+    			<p>Business Psychology - Experienced</p>
+    			<p>Photography - Rookie</p>
+    			<p>Video Editing - Beginner</p>
+    			<img src="img/programming.gif">
+			</article>
+			
 		</section>
 
 
@@ -121,7 +208,25 @@ pageYOffset: 0
 	<footer>
 		
 
-		<h1>footer</h1>
+		<ul>
+      <h4>Projects</h4>
+      <li>Modbay - Website</li>
+      <li>Survive Kranus - Survival Game</li>
+      <li>School Projects</li>
+    </ul>
+    <ul>
+      <h4>Links</h4>
+      <li>GitHub - Work/Private</li>
+      <li>GitHub - School/Public</li>
+      <li>Modbay.dk</li>
+      <li>Reddit</li>
+    </ul>
+
+    <ul>
+      <h4>Contact</h4>
+      <li>Facebook</li>
+      <li>Linkedin</li>
+    </ul>
 
 
 	</footer>
