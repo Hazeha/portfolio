@@ -15,7 +15,22 @@ h1{
 	margin: 5px;
 }
 nav{/* Comment */
+	width: 100px;
+	height: 200px;
 
+	display: block;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	text-align: center;
+}
+nav a{
+	text-decoration: none;
+	color: white;
+	font-size: 16pt;
+}
+nav a:hover{
+	font-size: 17pt;
 }
  progress{
  	width: 100%;
@@ -35,26 +50,91 @@ main{/* Comment */
 }
 header{/* Comment */
 	display: inline-block;
-	height: 100vh;
+	height: 45vh;
 	width: 100%;
 	background-color: #4AB19A;
 	color: white;
 	text-align: center;
+
 	
 }
+@-webkit-keyframes headNameAnim {
+  	from {
+  		font-size: 40pt;
+  	}
+  	to {
+  		font-size: 72pt;
+  		margin-top: 100px;
+  	}
+}
+
+@keyframes headNameAnim {
+  	from {
+  		font-size: 40pt;
+  	}
+  	to {
+  		font-size: 72pt;
+  		margin-top: 100px;
+  	}
+}
 header h1{
-	top: 20%;
+
 	font-weight: 10pt;
 	font-size: 72pt;
 	position: relative;
-	vertical-align: middle;
+	animation-name: headNameAnim;
+  	animation-duration: 4s;
+  	animation-fill-mode: forwards;
+
+  	-webkit-animation-name: headNameAnim;
+  	-webkit-animation-duration: 4s;
+  	-webkit-animation-fill-mode: forwards; 
+	
 }
 header p{
 
+	font-size: 16pt;
+}
+@-webkit-keyframes headInfoAnim {
+  	from {
+  		font-size: 72pt;
+  	}
+  	to {
+  		font-size: 20pt;
+  		margin-top: 20px;
+  	}
+}
+
+@keyframes headInfoAnim {
+  	from {
+  		font-size: 72pt;
+  	}
+  	to {
+  		font-size: 20pt;
+  		margin-top: 30px;
+  	}
+}
+#head-anim{
+	position: relative;
+  	animation-name: headInfoAnim;
+  	animation-duration: 4s;
+  	animation-fill-mode: forwards;
+
+  	-webkit-animation-name: headInfoAnim;
+  	-webkit-animation-duration: 4s;
+  	-webkit-animation-fill-mode: forwards; 
 }
 header a{
 
 }
+
+
+
+
+
+
+
+
 section{/* Comment */
 	margin: 0;
 	height: 100vh;
@@ -77,17 +157,15 @@ article{/* Comment */
 }
 #knowledge-article{
 	grid-area: 2 / 2;
+
 }
 #knowledge-video{
 	grid-area: 1 / 4 / 4;
-
 }
 #knowledge ul{
 	list-style: none;
 	text-align: center;
 }
-/* Safari 4.0 - 8.0 */
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes slideAnim {
   	from {
   		left: 0;
@@ -147,7 +225,7 @@ article{/* Comment */
 
 	display: grid;
 	grid-template-columns: repeat(3, 25%);
-	grid-template-rows: 120px 350px 350px;
+	grid-template-rows: 120px 400px 400px;
 	grid-column-gap: 10px;
   	grid-row-gap: 15px;
   	justify-content: center;
@@ -161,7 +239,7 @@ article{/* Comment */
 }
 .project-item{
 	width: 100%;
-	background-color: grey;
+	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 15px 0 rgba(0,0,0,0.19);
 	color: white;
 }
 .project-item h2{
@@ -170,6 +248,9 @@ article{/* Comment */
 }
 .project-item p{
 	margin: 0 15px 10px 15px;
+}
+.project-code{
+	float: right;
 }
 .project-item a{
 	display: inline-block;
@@ -201,6 +282,7 @@ article{/* Comment */
   	grid-row-gap: 15px;
   	justify-content: center;
   	align-content: center;
+
 }
 
 #about-info{
@@ -221,3 +303,32 @@ article{/* Comment */
     width: 100%; 
     height: 100%;
 }
+
+footer{
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+	footer ul{
+		list-style: none;
+		margin: auto;
+		padding: 0;
+		overflow: hidden;
+		text-align: center;
+	}
+	footer li{
+		margin: auto;
+		list-style: none;
+	}
+	footer li a{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 10px;
+		text-decoration: none;
+	}
+	footer li:hover{
+		background-color: #111111;
+		color: white;
+	}
