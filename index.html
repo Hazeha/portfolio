@@ -21,13 +21,7 @@
   			var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   			var scrolled = (winScroll / height) * 100;
   			document.getElementById("scrollBar").value = scrolled.toString();
-  			if (window.pageYOffset < AnimPosition) {
-    			element.style.cssText += "display:none;";
-
-  			} else {
-    			element.style.cssText += "display: block;";
-
-  			}
+  			
   			
 		}
 	</script>
@@ -48,6 +42,9 @@
 		  x[slideIndex-1].style.display = "block";
 		  dots[slideIndex-1].className;
 		}
+	</script>
+	<script type="text/javascript">
+		document.addEventListener('contextmenu', event => event.preventDefault());
 	</script>
 	<nav>
 		<a href="index.html"><img src="img/home-icon.png">About</a>
@@ -117,10 +114,10 @@
 				<img class="logo" src="img/phpsql-logo.png" alt="mysqllogo" onclick="currentDiv(4)">
 			
 				<h2>Photo & Video Editing</h2>
-				<img class="logo" src="img/ps-logo.png" alt="Photoshop" onclick="currentDiv(6)">
-				<img class="logo" src="img/ill-logo.png" alt="Illustrator" onclick="currentDiv(7)">
-				<img class="logo" src="img/ae-logo.png" alt="AfterEffect" onclick="currentDiv(8)">
-				<img class="logo" src="img/pr-logo.png" alt="PremierPro" onclick="currentDiv(9)">
+				<img class="logo" src="img/ps-logo.png" alt="Photoshop" onclick="currentDiv(5)">
+				<img class="logo" src="img/ill-logo.png" alt="Illustrator" onclick="currentDiv(6)">
+				<img class="logo" src="img/ae-logo.png" alt="AfterEffect" onclick="currentDiv(7)">
+				<img class="logo" src="img/pr-logo.png" alt="PremierPro" onclick="currentDiv(8)">
 				
 			
 			
@@ -129,35 +126,36 @@
 			</article>
 			
 			<article class="slide-info">
-				<h1>My5 Knowledge</h1>
+				<h1>C# Coding</h1>
+				<p>I started out using C# as main lang to program in</p>
+			</article>
+			<article class="slide-info">
+				<h1>Unity</h1>
+				<p>After a long time spending hours on creating simpel games in C# i found Unity and started using their platform to create games within</p>
+			</article>
+			<article class="slide-info">
+				<h1>HTML & CSS</h1>
+				<p>I started designing webpages when i were far younger, when i started my own gaming servers who needed a place for the community.</p>
+			</article>
+			<article class="slide-info">
+				<h1>PHP & MySql</h1>
+				<p>My big passion for gaming made me chase programming world, to expand and improve the big gaming era.</p>
+			</article>
+
+			<article class="slide-info">
+				<h1>Photoshop</h1>
 				<p>My passion for computers are extraordinær high</p>
 			</article>
 			<article class="slide-info">
-				<h1>My3 Knowledge</h1>
+				<h1>Illustrator</h1>
 				<p>My passion for computers are extraordinær high</p>
 			</article>
 			<article class="slide-info">
-				<h1>My 1Knowledge</h1>
+				<h1>After Effects</h1>
 				<p>My passion for computers are extraordinær high</p>
 			</article>
 			<article class="slide-info">
-				<h1>My2 Knowledge</h1>
-				<p>My passion for computers are extraordinær high</p>
-			</article>
-			<article class="slide-info">
-				<h1>My5 Knowledge</h1>
-				<p>My passion for computers are extraordinær high</p>
-			</article>
-			<article class="slide-info">
-				<h1>My3 Knowledge</h1>
-				<p>My passion for computers are extraordinær high</p>
-			</article>
-			<article class="slide-info">
-				<h1>My 1Knowledge</h1>
-				<p>My passion for computers are extraordinær high</p>
-			</article>
-			<article class="slide-info">
-				<h1>My2 Knowledge</h1>
+				<h1>Premier Pro</h1>
 				<p>My passion for computers are extraordinær high</p>
 			</article>
 
@@ -168,13 +166,14 @@
 		<section id="projects">
 
 			<article class="projects-header">
-				
+				<h1>Projects</h1>
 			</article>
 
 			<article class="project-item">
 				<h2>Got'ya Water</h2>
 				<p class="project-code">HTML-CSS</p>
 				<p>Concept - Website</p>
+				<hr>
 				<p>A concept of a company making customer's labeled bottle</p>
 				<img src="img/gotya.jpg">
 				<a href="#link" class="demo-link">Demo</a>
@@ -184,6 +183,7 @@
 				<h2>Amanzi Water</h2>
 				<p>Concept</p>
 				<p class="project-code">HTML-CSS</p>
+				<hr>
 				<p>The Beta-Version of Got'ya Water</p>
 				<img src="img/amanzi.png">
 				<a href="#link" class="demo-link">Demo</a>
@@ -193,6 +193,7 @@
 				<h2>Profile Video</h2>
 				<p class="project-code">Premier Pro</p>
 				<p>Video</p>
+				<hr>
 				<p>The video is showing a classmate and his personality</p>
 				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
 				<a href="#link" class="demo-link">Demo</a>
@@ -202,6 +203,7 @@
 				<h2>Sports Club</h2>
 				<p class="project-code">HTML-CSS</p>
 				<p>Website</p>
+				<hr>
 				<p>Project Descripttion</p>
 				<img src="img/hopla.jpg">
 				<a href="#link" class="demo-link">Demo</a>
@@ -211,6 +213,7 @@
 				<h2>Office App</h2>
 				<p class="project-code">Java</p>
 				<p>Android App</p>
+				<hr>
 				<p>For my employee that made the office communication better</p>
 				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
 				<a href="#link" class="demo-link">Demo</a>
@@ -220,6 +223,7 @@
 				<h2>Zombie Killer</h2>
 				<p class="project-code">C#</p>
 				<p>3D Game</p>
+				<hr>
 				<p>A game i made in the holidays getting new knowledge and fun.</p>
 				<img src="img/game.jpg">
 				<a href="#link" class="demo-link">Demo</a>
@@ -234,7 +238,7 @@
 
 		<section id="about-me">
 			
-			<article>
+			<article id="about-mega">
 				<h1>I'm Nikolaj</h1>
 				<h3>Whatever the challenge you have, i help with a solution</h3>
 				<p>I love to share all my knowledge.
