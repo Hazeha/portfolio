@@ -14,7 +14,7 @@
 		function scrollIndicator() {
 			var element = document.getElementById("slide-picture");
 
-			var AnimPosition = 1400;
+			var AnimPosition = 1000;
 
 
   			var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -29,6 +29,24 @@
 
   			}
   			
+		}
+	</script>
+	<script type="text/javascript">
+		function currentDiv(n) {
+  			showDivs(slideIndex = n);
+		}
+
+		function showDivs(n) {
+  			var i;
+  			var x = document.getElementsByClassName("slide-info");
+  			var dots = document.getElementsByClassName("logo");
+  			if (n > x.length) {slideIndex = 1}
+  			if (n < 1) {slideIndex = x.length}
+  			for (i = 0; i < x.length; i++) {
+     		x[i].style.display = "none";
+  		}
+		  x[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className;
 		}
 	</script>
 	<nav>
@@ -52,6 +70,7 @@
 					Your Way
 
 				</p>
+				
 			</article>
 			
 
@@ -87,20 +106,60 @@
 		<section id="slide">
 			
 
-			<article>
+			<article id="slide-picture">
 				
-				<p id="slide-picture">
-					picture
-				</p>
+			
+				<h2>Game Development</h2>
+				<img class="logo" src="img/sharp.png" alt="c#logo" onclick="currentDiv(1)">
+				<img class="logo" src="img/unity-logo.png" alt="unitylogo" onclick="currentDiv(2)">
+				<h2>Website Development</h2>
+				<img class="logo" src="img/html5.png" alt="htmllogo" onclick="currentDiv(3)">
+				<img class="logo" src="img/phpsql-logo.png" alt="mysqllogo" onclick="currentDiv(4)">
+			
+				<h2>Photo & Video Editing</h2>
+				<img class="logo" src="img/ps-logo.png" alt="Photoshop" onclick="currentDiv(6)">
+				<img class="logo" src="img/ill-logo.png" alt="Illustrator" onclick="currentDiv(7)">
+				<img class="logo" src="img/ae-logo.png" alt="AfterEffect" onclick="currentDiv(8)">
+				<img class="logo" src="img/pr-logo.png" alt="PremierPro" onclick="currentDiv(9)">
+				
+			
+			
 				
 
 			</article>
 			
-			<article>
-				<h1>Latest Work</h1>
-				My passion for computers are extraordinær high
+			<article class="slide-info">
+				<h1>My5 Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
 			</article>
-
+			<article class="slide-info">
+				<h1>My3 Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
+			<article class="slide-info">
+				<h1>My 1Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
+			<article class="slide-info">
+				<h1>My2 Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
+			<article class="slide-info">
+				<h1>My5 Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
+			<article class="slide-info">
+				<h1>My3 Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
+			<article class="slide-info">
+				<h1>My 1Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
+			<article class="slide-info">
+				<h1>My2 Knowledge</h1>
+				<p>My passion for computers are extraordinær high</p>
+			</article>
 
 
 
@@ -109,7 +168,7 @@
 		<section id="projects">
 
 			<article class="projects-header">
-				<h1>Recent Projects</h1>
+				
 			</article>
 
 			<article class="project-item">
@@ -202,6 +261,7 @@
     			<p>Video Editing - Beginner</p>
     			<img src="img/programming.gif">
 			</article>
+
 			
 		</section>
 		<footer>

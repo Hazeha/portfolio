@@ -17,7 +17,7 @@ h1{
 nav{/* Comment */
 	width: 100px;
 	height: 200px;
-
+	z-index: 5;
 	display: block;
 	position: fixed;
 	right: 20px;
@@ -50,7 +50,7 @@ main{/* Comment */
 }
 header{/* Comment */
 	display: inline-block;
-	height: 45vh;
+	max-height: 100vh;
 	width: 100%;
 	background-color: #4AB19A;
 	color: white;
@@ -150,14 +150,15 @@ article{/* Comment */
 	background-color: #21364B ;
 	color: white;
 	display: grid;
-	grid-template-columns: auto 550px 140px 400px auto;
+	grid-template-columns: auto 550px 2% 400px auto;
+	
 	grid-template-rows: auto 60% auto;
 
 
 }
 #knowledge-article{
 	grid-area: 2 / 2;
-
+	max-height: 90vh;
 }
 #knowledge-video{
 	grid-area: 1 / 4 / 4;
@@ -176,37 +177,37 @@ article{/* Comment */
   		height: 90%;
   		width: 70%;
   		opacity: 1;
-  		background-color: blue;
+
   	}
 }
 
 @keyframes slideAnim {
   	from {
-  		left: 0px;
-  		width: 0px;
+  		left: 20%;
+  		width: 70%;
   		opacity: 0;
   	}
   	to {
-  		width: 70%;
+  		width: 95%;
   		height: 90%;
-  		left: 25%; 
+  		left: 0; 
   		opacity: 1;
-  		background-color: blue;
+  		background-color: rgba(0,0,0,0.15);
   	}
 }
 
 #slide{
   	background-color: #E29470;
   	display: grid;
-  	grid-template-columns: 50% 50%;
-  	grid-template-rows: 100%;
+  	grid-template-columns: 40% 40%;
+  	grid-gap: 5%;
+  	grid-template-rows: 90%;
   	justify-content: center;
 }
 #slide-picture{
 	top: 20px;
-	width: 100px;
-  	height: 100px;
-  	background-color: red;
+
+	text-align: center;
   	position: relative;
   	animation-name: slideAnim;
   	animation-duration: 4s;
@@ -216,10 +217,13 @@ article{/* Comment */
   	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
   	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
 }
-#slide-info{
-	
+.slide-info{
+	top: 20px;
+	display: none;
 }
-
+.logo-selected{
+	border: 1px solid black;
+}
 #projects{
 	background-color: #66A7D5;
 
@@ -239,7 +243,8 @@ article{/* Comment */
 }
 .project-item{
 	width: 100%;
-	box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 15px 0 rgba(0,0,0,0.19);
+	background-color: rgba(0,0,0,0.15);
+	border-radius: 5px;
 	color: white;
 }
 .project-item h2{
@@ -276,9 +281,9 @@ article{/* Comment */
 	background-color: #31355B;
 	color: white;
 	display: grid;
-	grid-template-columns: 500px 400px;
+	grid-template-columns: 30% 25%;
 	grid-template-rows: 120px 350px 350px;
-	grid-column-gap: 10px;
+	grid-column-gap: 10%;
   	grid-row-gap: 15px;
   	justify-content: center;
   	align-content: center;
@@ -301,7 +306,8 @@ article{/* Comment */
     right: 0;
     bottom: 0;
     width: 100%; 
-    height: 100%;
+    max-height: 100vh;
+    z-index: 1;
 }
 
 footer{
