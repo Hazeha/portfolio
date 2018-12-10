@@ -46,7 +46,7 @@ nav a:hover{
   	position: fixed;
  }
 #navigaion{
-
+ 
 }
 main{/* Comment */
 	margin: 0;
@@ -95,8 +95,9 @@ header h1{
 }
 header p{
 	font-family: 'Nanum Gothic Coding', monospace;
-	font-size: 16pt;
+	font-size: 36pt;
 }
+
 @-webkit-keyframes headInfoAnim {
   	from {
   		font-size: 72pt;
@@ -270,7 +271,6 @@ article{/* Comment */
 	-webkit-border-radius: 5;
 	-moz-border-radius: 5;
 	border-radius: 5px;
-	font-family: Arial;
 	color: #ffffff;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
