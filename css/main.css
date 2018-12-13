@@ -17,6 +17,9 @@ h1{
 	margin: 5px;
 	font-family: 'Nanum Gothic Coding', monospace;
 }
+p{
+	font-size: 18pt;
+}
 nav{/* Comment */
 	width: 100px;
 	height: 200px;
@@ -80,7 +83,6 @@ header{/* Comment */
   	}
 }
 header h1{
-	font-family: 'Lobster', cursive;
 	font-weight: 10pt;
 	font-size: 72pt;
 	position: relative;
@@ -134,7 +136,10 @@ section{/* Comment */
 	height: 100vh;
 	width: 100%;
 	display: grid;
-	grid-template-areas:  	
+	justify-content: center;
+  	align-content: center;
+	grid-column-gap: 10px;
+  	grid-row-gap: 15px;
 }
 article{/* Comment */
 
@@ -144,11 +149,8 @@ article{/* Comment */
 	background-color: #21364B ;
 	color: white;
 	display: grid;
-	grid-template-columns: auto 550px 2% 400px auto;
-	
+	grid-template-columns: auto 550px 2% 400px auto;	
 	grid-template-rows: auto 60% auto;
-
-
 }
 #knowledge-article{
 	grid-area: 2 / 2;
@@ -190,18 +192,14 @@ article{/* Comment */
   		background-color: rgba(0,0,0,0.15);
   	}
 }
-
 #slide{
   	background-color: #E29470;
   	display: grid;
   	grid-template-columns: 40% 40%;
-  	grid-gap: 5%;
   	grid-template-rows: 90%;
-  	justify-content: center;
 }
 #slide-picture{
 	top: 20px;
-
 	text-align: center;
   	position: relative;
   	animation-name: slideAnim;
@@ -223,14 +221,10 @@ article{/* Comment */
 
 #projects{
 	background-color: #66A7D5;
-
 	display: grid;
 	grid-template-columns: repeat(3, 25%);
 	grid-template-rows: 120px 400px 400px;
-	grid-column-gap: 10px;
-  	grid-row-gap: 15px;
-  	justify-content: center;
-  	align-content: center;
+
 }
 .projects-header{
 	grid-area: 1 / 1 / 1/ 4;
@@ -244,12 +238,17 @@ article{/* Comment */
 	border-radius: 5px;
 	color: white;
 }
+.project-item h1{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
 .project-item h2{
 	text-align: center;
 	margin: 5px;
 }
 .project-item p{
 	margin: 0 15px 10px 15px;
+	font-size: 12pt;
 }
 .project-item hr{
 	 border: 0;
@@ -258,7 +257,9 @@ article{/* Comment */
 }
 .project-code{
 	float: right;
+
 }
+
 .project-item a{
 	display: inline-block;
 	margin: 10px 15px 0 15px;
@@ -304,12 +305,10 @@ article{/* Comment */
 	color: white;
 	display: grid;
 	grid-template-columns: 30% 25%;
-	grid-template-rows: 120px 350px 350px;
-	grid-column-gap: 10%;
-  	grid-row-gap: 15px;
-  	justify-content: center;
-  	align-content: center;
-
+	grid-template-rows: 350px 350px;
+}
+#about-me p{
+	font-size: 12pt;
 }
 #about-mega{
 	
