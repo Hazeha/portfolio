@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-	<title>Niko Coding Portfolio</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130773171-1"></script>
 <script>
@@ -14,12 +10,16 @@
 	  gtag('config', 'UA-130773171-1');
 </script>
 
+	<title>Niko Coding Portfolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 <body>
 	
 	<script type="text/javascript">
-	// Scroll function for top indocator 
+	// Scroll bar funktion der gør 2 ting
+	// Den regner ud hvor langt du er på siden og tilpasser scroll view i toppen. Den anden funktion er at den starter en animation på knowledge sektionen når den når til AnimPosition
 		window.onscroll = function() {scrollIndicator()};
 
 		function scrollIndicator() {
@@ -37,10 +37,11 @@
 		}
 	</script>
 	<script type="text/javascript">
+		//Denne funktion er til knowledge sektionen. den tæller antal logo'er og sætter dem i array
 		function currentDiv(n) {
   			showDivs(slideIndex = n);
 		}
-
+		//Denne funktion matcher logo'er med info artiklen til venstre i knowledge sektionen. Dertil er der en start artikle der fortæller at man skal trykke på logo, som erstattes med info når der trykkes.
 		function showDivs(n) {
   			var i;
   			var start = document.getElementById("slide-start");
@@ -59,57 +60,55 @@
 	<!-- <script type="text/javascript">
 		document.addEventListener('contextmenu', event => event.preventDefault());
 	</script> -->
+
+	<!-- Nav bar. Kun to link og er flyttet ned i højre hjørne-->
 	<nav>
 		<a href="index.html"><img src="img/home-icon.png">About</a>
 		<a href="work.html"><img src="img/work-icon.png">Work</a>
 	</nav>
-	<main>
-		<progress max="100" id="scrollBar" value=""></progress>
 
-		<header>
-			
+	<main>
+		<!-- Dette er min scroll bar som erstatter den originale scrollbar i siden -->
+		<progress max="100" id="scrollBar" value=""></progress>
+		<!-- Header med animation - Kunne godt laves bedre -->
+		<header>		
 
 			<h1>Nikolaj Lassen</h1>
 			<p id="head-anim">Software Design and Engineering</p>
 
 			
-			
+			<!-- Tilføj evt flere animationer -->
 
 		</header>
 
-
+		<!-- Full Screen section -->
 		<section id="knowledge">
 			<article id="knowledge-article">
 				<ul>
 					<li><h1>Coding</h1></li>
-					<li><h1>Design</h1></li>
 					<li><h1>Graphics</h1></li>
-					<li><h1>Security</h1></li>
 					<li><h1>Content Designs</h1></li>
 					<li><h1>App Development</h1></li>
 					<li><h1>Web Integration</h1></li>
 
 				</ul>
 			</article>
+
+			<!-- Dette er min video. Den autoplayer når siden loades og der er ikke mulighed for at stoppe den. dette er meningen... 
+			Dertil skal man bare style, "show the source" og angive type-->
 			<article id="knowledge-video">				
 				<video autoplay muted loop id="myVideo">
   					<source src="img/coding.mp4" type="video/mp4"> 				
 				</video>
 			</article>
-			
-
-
 
 		</section>
-
-
-
-		<section id="slide">
-			
+		<!-- Knowledge menu, som er interaktiv så brugeren selv har mulighed for at se hvilke ompetancer jeg har. -->
+		<section id="slide">				
 
 			<article id="slide-picture">
-				
-			
+				<h1>Knowledge Menu</h1>
+			<!--  Her navender jeg normale img tags til at håndtere mine logo og links  -->
 				<h2>Game Development</h2>
 				<img class="logo" src="img/sharp.png" alt="c#logo" onclick="currentDiv(1)">
 				<img class="logo" src="img/unity-logo.png" alt="unitylogo" onclick="currentDiv(2)">
@@ -128,45 +127,53 @@
 				
 
 			</article>
-			
+			<!-- Start article der viser hurtigt hvad man skal gøre hvis man vil vide mere -->
 			<article id="slide-start">
 				<h1>My Knowledge</h1>
-				<h2>You can click on the icons on the side to see more about my skills</h2>
+				<h2>Click on the icons on the side to see more about my proffesions</h2>
 				<img src="img/orange-arrow.png" alt="orangearrow">
 			</article>
-
+			<!-- Articler med info om hvad jeg kan -->
 			<article class="slide-info">
 				<h1>C# Coding</h1>
 				<p>I started out using C# as main lang to program in</p>
+				<h2>★★★★★★</h2>
 			</article>
 			<article class="slide-info">
 				<h1>Unity</h1>
 				<p>After a long time spending hours on creating simpel games in C# i found Unity and started using their platform to create games within</p>
+				<h1>★★★★★★</h1>
 			</article>
 			<article class="slide-info">
 				<h1>HTML & CSS</h1>
 				<p>I started designing webpages when i were far younger, when i started my own gaming servers who needed a place for the community.</p>
+				<h1>★★★★★★</h1>
 			</article>
 			<article class="slide-info">
 				<h1>PHP & MySql</h1>
 				<p>My big passion for gaming made me chase programming world, to expand and improve the big gaming era.</p>
+				<h1>★★★★★★</h1>
 			</article>
 
 			<article class="slide-info">
 				<h1>Photoshop</h1>
 				<p>My passion for computers are extraordinær high</p>
+				<h1>★★★★★★</h1>
 			</article>
 			<article class="slide-info">
 				<h1>Illustrator</h1>
 				<p>My passion for computers are extraordinær high</p>
+				<h1>★★★★★★</h1>
 			</article>
 			<article class="slide-info">
 				<h1>After Effects</h1>
 				<p>My passion for computers are extraordinær high</p>
+				<h1>★★★★★★</h1>
 			</article>
 			<article class="slide-info">
 				<h1>Premier Pro</h1>
 				<p>My passion for computers are extraordinær high</p>
+				<h1>★★★★★★</h1>
 			</article>
 
 
