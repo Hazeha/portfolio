@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130773171-1"></script>
@@ -17,7 +17,7 @@
 </head>
 <body>
 	
-	<script type="text/javascript">
+	<script>
 	// Scroll bar funktion der gør 2 ting
 	// Den regner ud hvor langt du er på siden og tilpasser scroll view i toppen. Den anden funktion er at den starter en animation på knowledge sektionen når den når til AnimPosition
 		window.onscroll = function() {scrollIndicator()};
@@ -33,10 +33,11 @@
   			var scrolled = (winScroll / height) * 100;
   			document.getElementById("scrollBar").value = scrolled.toString();
   			
+
   			
 		}
 	</script>
-	<script type="text/javascript">
+	<script>
 		//Denne funktion er til knowledge sektionen. den tæller antal logo'er og sætter dem i array
 		function currentDiv(n) {
   			showDivs(slideIndex = n);
@@ -48,28 +49,25 @@
   			var x = document.getElementsByClassName("slide-info");
   			var dots = document.getElementsByClassName("logo");
   			if (n > x.length) {slideIndex = 1}
-  			if (n < 1) {slideIndex = x.length}
-  			for (i = 0; i < x.length; i++) {
-     		x[i].style.display = "none";
-  		}
-  			start.style.display = "none";
-		  	x[slideIndex-1].style.display = "block";
-		  	dots[slideIndex-1].className;
+  				if (n < 1) {slideIndex = x.length}
+  					for (i = 0; i < x.length; i++) {
+     					x[i].style.display = "none";
+  					}
+  					start.style.display = "none";
+		  			x[slideIndex-1].style.display = "block";
+		  			dots[slideIndex-1].className;
 		}
 	</script>
-	<!-- <script type="text/javascript">
-		document.addEventListener('contextmenu', event => event.preventDefault());
-	</script> -->
 
 	<!-- Nav bar. Kun to link og er flyttet ned i højre hjørne-->
 	<nav>
-		<a href="index.html"><img src="img/home-icon.png">About</a>
-		<a href="work.html"><img src="img/work-icon.png">Work</a>
+		<a href="index.html"><img src="img/home-icon.png" alt="home-icon">About</a>
+		<a href="work.html"><img src="img/work-icon.png" alt="work-icon">Work</a>
 	</nav>
 
 	<main>
 		<!-- Dette er min scroll bar som erstatter den originale scrollbar i siden -->
-		<progress max="100" id="scrollBar" value=""></progress>
+		<progress max="100" id="scrollBar" value="0"></progress>
 		<!-- Header med animation - Kunne godt laves bedre -->
 		<header>		
 
@@ -80,44 +78,20 @@
 			<!-- Tilføj evt flere animationer -->
 
 		</header>
-
-		<!-- Full Screen section -->
-		<section id="knowledge">
-			<article id="knowledge-article">
-
-				<ul>
-					<li><h1>Coding</h1></li>
-					<li><h1>Graphics</h1></li>
-					<li><h1>Content Designs</h1></li>
-					<li><h1>App Development</h1></li>
-					<li><h1>Web Integration</h1></li>
-
-				</ul>
-			</article>
-
-			<!-- Dette er min video. Den autoplayer når siden loades og der er ikke mulighed for at stoppe den. dette er meningen... 
-			Dertil skal man bare style, "show the source" og angive type-->
-			<article id="knowledge-video">				
-				<video autoplay muted loop id="myVideo">
-  					<source src="img/coding.mp4" type="video/mp4"> 				
-				</video>
-			</article>
-
-		</section>
 		<!-- Knowledge menu, som er interaktiv så brugeren selv har mulighed for at se hvilke ompetancer jeg har. -->
 		<section id="slide">				
 
 			<article id="slide-picture">
-				<h1>Knowledge Menu</h1>
-			<!--  Her navender jeg normale img tags til at håndtere mine logo og links  -->
-				<h2>Game Development</h2>
+				<h2>Knowledge Menu</h2>
+			<!--  Her navender jeg normale img tags til at håndtere mine logo og links, der parser deres index til currenDiv functionen der skifter et andet element til mere info om ´viden  -->
+				<h3>Game Development</h3>
 				<img class="logo" src="img/sharp.png" alt="c#logo" onclick="currentDiv(1)">
 				<img class="logo" src="img/unity-logo.png" alt="unitylogo" onclick="currentDiv(2)">
-				<h2>Website Development</h2>
+				<h3>Website Development</h3>
 				<img class="logo" src="img/html5.png" alt="htmllogo" onclick="currentDiv(3)">
 				<img class="logo" src="img/phpsql-logo.png" alt="mysqllogo" onclick="currentDiv(4)">
 			
-				<h2>Photo & Video Editing</h2>
+				<h3>Photo & Video Editing</h3>
 				<img class="logo" src="img/ps-logo.png" alt="Photoshop" onclick="currentDiv(5)">
 				<img class="logo" src="img/ill-logo.png" alt="Illustrator" onclick="currentDiv(5)">
 				<img class="logo" src="img/ae-logo.png" alt="AfterEffect" onclick="currentDiv(5)">
@@ -130,15 +104,15 @@
 			</article>
 			<!-- Start article der viser hurtigt hvad man skal gøre hvis man vil vide mere -->
 			<article id="slide-start">
-				<h1>Have an Idea?</h1>
-				<p>I'm a developer across many platforms, so I know how to create your app, website, game or whatever the idea you have, I can build it to run across many different devices using the latest knowledge about technologies and programming.</p>
+				<h2>Have an Idea?</h2>
+				<p>I'm a developer across many platforms, so I know how to create your app, website, game or whatever the idea you have<br> I can build it to run across many different devices using the latest knowledge about technologies and programming.</p>
 				<p>I love computer science and keep expanding my knowledge in the field as an online engineer. Click on the icons to the left if you want to know more about my skills on different development platforms and coding languages including design and editing softwares.</p>
 				<h3>Click on the icons the see more</h3>
-				<img src="img/orange-arrow.png" alt="orangearrow">
+				<img src="img/orange-arrow.png" alt="orangearrow" id="slide-arrow">
 			</article>
 			<!-- Articler med info om hvad jeg kan -->
 			<article class="slide-info">
-				<h1>C# Coding</h1>
+				<h2>C# Coding</h2>
 				<h3>Do you have complex coding jobs? I can help</h3>
 				<p>I develop across many platforms but the first programming language i learned was c# and .net</p>
 				<p>So im suited for more complex and advanced work</p>
@@ -152,7 +126,7 @@
 				</ul>
 			</article>
 			<article class="slide-info">
-				<h1>Unity</h1>
+				<h2>Unity</h2>
 				<h3>Game Development Platform</h3>
 				<p>After a long time spending hours on creating simple games and mods in many different languages I found Unity and started learning about bigger, smarter and faster game development.</p>
 				<p>I made some different but very simple games</p>
@@ -165,7 +139,7 @@
 				
 			</article>
 			<article class="slide-info">
-				<h1>HTML & CSS</h1>
+				<h2>HTML & CSS</h2>
 				<h3>Need help for a Webpage? I'm the guy</h3>
 				<p>With many years of experience in coding i can help you with your idea.</p>
 				<p>Simple private websites</p>
@@ -178,13 +152,13 @@
 								
 			</article>
 			<article class="slide-info">
-				<h1>PHP & MySql</h1>
+				<h2>PHP & MySql</h2>
 				<h3>Do you have the design for your web page and need back end programming?</h3>
 				<p>If you want your website to work smarter, come alive, implement data structures, databases, contact form, user directory, even a web shop or a big forum community. I can help you further in your projects.</p>
 			</article>
 
 			<article class="slide-info">
-				<h1>Video & Photo Editing</h1>
+				<h2>Video & Photo Editing</h2>
 				<h3>It's really fun and creative to play with pictures and video editing</h3>
 				<p>I m</p>
 				
@@ -193,77 +167,95 @@
 
 
 		</section>
+		<!-- Full Screen section -->
+		<section id="knowledge">
+			<article id="knowledge-article">
+
+				<ul>
+					<li><h2>Coding</h2></li>
+					<li><h2>Graphics</h2></li>
+					<li><h2>Content Designs</h2></li>
+					<li><h2>App Development</h2></li>
+					<li><h2>Web Integration</h2></li>
+
+				</ul>
+				
+				<p>I'm a technologists and entrepreneur, so I understand both the technical and business challenges of creating digital products</p>
+			</article>
+
+			<!-- Dette er min video. Den autoplayer når siden loades og der er ikke mulighed for at stoppe den. dette er meningen... 
+			Dertil skal man bare style, "show the source" og angive type-->
+			<article id="knowledge-video">				
+				<video autoplay muted loop id="myVideo">
+  					<source src="img/coding.mp4" type="video/mp4"> 				
+				</video>
+			</article>
+
+		</section>
+		
 		
 		<section id="projects">
 
 			<article class="projects-header">
-				<h1>My Recent Work</h1>
+				<h2>My Recent Work</h2>
 				<p>Here is some recent projects i have done. 
 				 All done projects are posted <a href="#">Here</a> and all ongoing project on <a href="#">Github</a></p>
 			</article>
 
 			<article class="project-item">
-				<h2>Got'ya Water</h2>
+				<h3>Got'ya Water</h3>
 				<p class="project-code">HTML-CSS</p>
 				<p>Concept - Website</p>
 				
-				<p>A concept of a company making customer's labeled bottle</p>
-				<img src="img/gotya.jpg">
+				<img src="/img/gotya.png" alt="project-img">
+				<h4>Assignment</h4>
+				<p>A 4-week theme course focused on developing a concept and a brand and then developing a sales platform.</p>
+				<h4>My Role</h4>
+				<p>In this project i where the project specialist in coding and closing of the project with the last touch, in documentations and design.</p>
+				<h4>Solution</h4>
+				<p>We came up with a concept of selling water bottles with our customers personal label printed on it by us.</p>
+				<p>The concept is meant to make it easier for small business owners to promote their concept, products or services with our bottle.</p>
+				<p>It's our way to think of a smarter business card.</p>
 				<a href="#link" class="demo-link">Demo</a>
-				<a href="#download" class="download-link">Download</a>
+				<a href="#description" class="description-link">Description</a>
 			</article>
+			
 			<article class="project-item">
-				<h2>Amanzi Water</h2>
-				<p class="project-code">HTML-CSS</p>
-				<p>Concept</p>
-				
-				<p>The Beta-Version of Got'ya Water</p>
-				<img src="img/amanzi.png">
-				<a href="#link" class="demo-link">Demo</a>
-				<a href="#download" class="download-link">Download</a>
-			</article>
-			<article class="project-item">
-				<h2>Video Portrait</h2>
-				<p class="project-code">Premier Pro</p>
+				<h3>Video Portrait</h3>
+				<p class="project-code">Footage and Editing</p>
 				<p>Video</p>
 				
-				<p>The video is showing a classmate and his personality</p>
-				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
+				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now" alt="project-img">
+				<h4>Assignment</h4>
+				<p>A 2-week course to make a portrait video of our theme partner.</p>
+				<h4>My Role</h4>
+				<p>The project were individual and all roles from the video spectral was laid upon the individual.</p>
+				<p>Filming & Editing has been made by me, Acting was done by Joachim Thorius </p>
+				<h4>Solution</h4>
+				<p>This were my first time filming and editing a portrait movie. The course were launched at the start of our education, and we still lacked trust to each other.</p>
+				<p>The film is my classmate playing with his football different places with loads of video effects.</p>
 				<a href="#link" class="demo-link">Demo</a>
-				<a href="#download" class="download-link">Download</a>
+				<a href="#description" class="description-link">Description</a>
 			</article>
+
+
 			<article class="project-item">
-				<h2>Sports Club</h2>
+				<h3>Sports Club</h3>
 				<p class="project-code">HTML-CSS</p>
 				<p>Website</p>
 				
-				<p>Project Descripttion</p>
-				<img src="img/hopla.jpg">
+				<img src="/img/hopla.png" alt="project-img">
+				<h4>Assignment</h4>
+				<p>Part 2 of a theme project focuses on iterations in the design process. We tested and further developed a digital product prepared by another group.S</p>
+				<h4>My Role</h4>
+				<p>In this project i were the specialist. It fell naturally since my experiences with the digital world have been a long way. <br> This is the best role for me and the group, as my competencies are within the scope of the programming </p>
+				<h4>Solution</h4>
+				<p>The project needed a big overhauling from the past group and we came up with a solution miles from theirs.</p>
+				<p>We made the website for the sportclub very informative with meeting information, opening times, contact information and much more.</p>
 				<a href="#link" class="demo-link">Demo</a>
-				<a href="#download" class="download-link">Download</a>
+				<a href="#description" class="description-link">Description</a>
 			</article>
-			<article class="project-item">
-				<h2>Office App</h2>
-				<p class="project-code">Java</p>
-				<p>Android App</p>
-				
-				<p>For my employee that made the office communication better</p>
-				<img src="https://via.placeholder.com/350x200?text=Visit+Blogging.com+Now">
-				<a href="#link" class="demo-link">Demo</a>
-				<a href="#download" class="download-link">Download</a>
-			</article>
-			<article class="project-item">
-				<h2>Zombie Killer</h2>
-				<p class="project-code">C#</p>
-				<p>3D Game</p>
-				
-				<p>A game i made in the holidays getting new knowledge and fun.</p>
-				<img src="img/game.jpg">
-				<a href="#link" class="demo-link">Demo</a>
-				<a href="#download" class="download-link">Download</a>
-			</article>
-
-
+			
 			
 
 		</section>
@@ -272,50 +264,50 @@
 		<section id="about-me">
 			
 			<article id="about-mega">
-				<h1>I'm Nikolaj</h1>
+				<h2>I'm Nikolaj</h2>
 				<h3>Whatever the challenge you have, i help with a solution</h3>
-				<p>I love to share all my knowledge.
-					In fact it's a win/win situation.
-					Studies says that giving your own knowledge to others by teaching them, will expand your own knowledge.
-					But everyone isn't Stephen Hawking.</p>
+				<p>I'm 25 year old man coming from Denmark, where i studied computer science. I started gaining knowledge with computers when i were 15 and ever since i have kept expanding my digital skills on computers and servers. Creating loads of private projects.</p>
+				<p>I have been working with programming on a full time job for 4 years. Before i started on a digital design course. My goal is to gain further knowledge about design and human thinking. </p>
 
 				
 			</article>
 			<article id="about-info">
-				<img id="profile-photo" src="img/me.jpg">
+				<img id="profile-photo" src="img/me.jpg" alt="profile-img">
 				
 				
 
 			</article>
 			<article>
-				<h2>Ask Me!</h2>
+				<h3>Ask Me!</h3>
     				<p>I love to share all my knowledge.</p>
     				<p>In fact it's a win/win situation. </p><p> Studies says that giving your own knowledge to others by teaching them, will expand your own knowledge.</p><p> But everyone isn't Stephen Hawking.</p>
 
-    			<h2>Hire!</h2>
-    				<p>Im currently not looking for work, if you can offer something different and with a higher difficulty Contact me!</p>
+    			<h3>Hire!</h3>
+    				<p>I always look to expand my knowledge, even tho i don't have the skills u need listed here, im sure i can help you anyway.</p>
 			</article>
 			<article>
-				<p>Coding Experience - Trained</p>
-    			<p>Design Experience - Beginner</p>
+				<h3>Experiences</h3>
     			<p>Data Security - Experienced</p>
-    			<p>Business Economics - Trained</p>
-    			<p>Business Psychology - Experienced</p>
-    			<p>Photography - Rookie</p>
+				<p>Coding Experience - Experienced</p>
+    			<p>Business Economy - Trained</p>
+    			<p>Design Experience - Beginner</p>
     			<p>Video Editing - Beginner</p>
-    			<img src="img/programming.gif">
+    			<p>Photography - Rookie</p>
+    			<img src="img/programming.gif" alt="mini-gif">
 			</article>
 			
 		</section>
 		<footer>
 			<ul>
-      		<h4>Projects</h4>
+				<li><h4>Projects</h4></li>
+      		
       			<li>Modbay - Website</li>
       			<li>Survive Kranus - Survival Game</li>
       			<li>School Projects</li>
     		</ul>
     		<ul>
-      			<h4>Links</h4>
+    			<li><h4>Links</h4></li>
+      			
       			<li>GitHub - Work/Private</li>
       			<li>GitHub - School/Public</li>
       			<li>Modbay.dk</li>
@@ -323,7 +315,7 @@
     		</ul>
 
     		<ul>
-      			<h4>Contact</h4>
+      			<li><h4>Contact</h4></li>
       			<li>Facebook</li>
       			<li>Linkedin</li>
     		</ul>
@@ -331,10 +323,5 @@
 
 	</footer>
 	</main>
-
-
-	
-
-</script>
 </body>
 </html>

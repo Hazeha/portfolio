@@ -15,6 +15,11 @@ body{/* Comment */
 h1{
 	font-size: 42pt;
 	margin: 5px;
+	font-family: 'Lobster';
+}
+h2{
+	font-size: 36pt;
+	margin: 5px;
 	font-family: 'Nanum Gothic Coding', monospace;
 }
 p{
@@ -53,6 +58,7 @@ nav a:hover{
 }
 main{/* Comment */
 	margin: 0;
+	width: 100%;
 }
 header{/* Comment */
 	display: inline-block;
@@ -83,7 +89,7 @@ header{/* Comment */
   	}
 }
 header h1{
-	font-weight: 10pt;
+	font-weight: 400;
 	font-size: 72pt;
 	position: relative;
 	animation-name: headNameAnim;
@@ -155,14 +161,17 @@ article{/* Comment */
 #knowledge-article{
 	grid-area: 2 / 2;
 	max-height: 90vh;
-
+	text-align: center;
 }
 #knowledge-video{
 	grid-area: 1 / 4 / 4;
 }
 #knowledge ul{
 	list-style: none;
-	text-align: center;
+}
+#knowledge p{
+	text-decoration: underline;
+	color: rgba(255, 255, 255, 0.5);
 }
 @-webkit-keyframes slideAnim {
   	from {
@@ -174,7 +183,6 @@ article{/* Comment */
   		height: 90%;
   		width: 70%;
   		opacity: 1;
-
   	}
 }
 
@@ -218,7 +226,10 @@ article{/* Comment */
 .logo-selected{
 	border: 1px solid black;
 }
-
+#slide-arrow{
+	width: 40%;
+ 		
+ 	}
 #projects{
 	background-color: #66A7D5;
 	display: grid;
@@ -236,28 +247,27 @@ article{/* Comment */
 	width: 100%;
 	background-color: rgba(0,0,0,0.15);
 	border-radius: 5px;
+	margin: 15px;
 	color: white;
+	grid-row: 2 / span 3;
 }
-.project-item h1{
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-.project-item h2{
+
+.project-item h3{
+	font-family: 'Nanum Gothic Coding', monospace;
 	text-align: center;
 	margin: 5px;
+	font-size: 24pt;
+}
+.project-item h4{
+	margin: 5px 0 0 5px;
+	font-size: 18pt;
 }
 .project-item p{
-	margin: 0 15px 10px 15px;
-	font-size: 12pt;
-}
-.project-item hr{
-	 border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	margin: 5px 0 15px 15px;
+	font-size: 14pt;
 }
 .project-code{
 	float: right;
-
 }
 
 .project-item a{
@@ -290,15 +300,23 @@ article{/* Comment */
 	display: block;
 	margin: 0 auto;
 	width: 95%;
-	height: 60%;
 }
-.download-link{
+.description-link{
 	
 }
+
 .demo-link{
 	float: right;
 }
-
+.project-info{
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	display: none;
+	width: 500px;
+	height: 700px;
+	background-color: rgba(0, 0, 0, 0.9);
+}
 
 #about-me{
 	background-color: #31355B;
@@ -308,7 +326,7 @@ article{/* Comment */
 	grid-template-rows: 350px 350px;
 }
 #about-me p{
-	font-size: 12pt;
+	font-size: 14pt;
 }
 #about-mega{
 	
@@ -319,11 +337,6 @@ article{/* Comment */
 #profile-photo{
 	width: 400px;
 }
-
-
-
-
-
 #myVideo {
     position: sticky;
     right: 0;
@@ -361,3 +374,23 @@ footer{
 		background-color: #111111;
 		color: white;
 	}
+
+@media (max-width: 1000px) {
+ 	#projects{
+ 		height: auto !important;
+ 		display: flex;
+ 		flex-direction: column;
+ 	}
+ 	#knowledge{
+ 		height: auto !important;
+ 		display: flex;
+ 		flex-direction: column;
+ 	}
+ 	#slide{
+ 		height: 1100px;
+ 	}
+ 
+ 	article{
+
+ 	}
+}
